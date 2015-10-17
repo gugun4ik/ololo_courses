@@ -2,15 +2,9 @@
 
 class Controller_Services extends Controller
 {
-    function __construct()
-    {
-        $this->model = new Model_Services();
-        parent::__construct();
-    }
-    
-    function action_index()
-    {
-        $data = $this->model->getData();
-        $this->view->generate('services_view.php', $data);
-    }
+
+	function action_index()
+	{
+		$this->view->generate('services_view.php', 'template_view.php');
+	}
 }
